@@ -1,0 +1,653 @@
+/* Global styles for margin, padding, and box-sizing */
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }    
+    
+/* Styles for body and html to ensure full height and consistent font */
+
+body,
+    html {
+        height: 100%;
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        color: white;
+    }    
+    
+/*  Outer div for the full background, with a background image */
+
+.background {
+        background: url('images/bg.jpg') no-repeat center center/cover;
+        position: relative;
+        height: 100%;
+    }    
+    
+/* Overlay div to darken the background and center the content */
+
+.overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }    
+    
+/* Navigation bar at the top of the overlay */
+
+.navbar {
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px;
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
+    
+    
+/*  Styles for buttons and select elements in the navbar */
+
+.navbar button,
+    .navbar select {
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        margin-left: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .navbar button {
+        background-color: #e50914;
+    }
+
+    .navbar button:hover {
+        background-color: #c8141c;
+    }
+
+    .navbar select {
+        background-color: #333;
+    }
+    
+/* Content container within the overlay */
+
+.content {
+        max-width: 750px;
+        padding: 20px;
+    }    
+
+/* Logo positioning within the overlay */
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    width: 15vw; 
+    max-width: 150px; 
+}
+
+/*  Heading styles */
+
+h1 {
+    font-size: clamp(2rem, 6vw, 4rem); 
+    font-weight: 760;
+    margin-top: 100px; 
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+    line-height: 1.2;
+}
+
+p {
+    font-size: clamp(1rem, 2vw, 1.2rem); 
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Email subscription form styling */
+
+.email-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    margin-top: 20px; 
+}
+
+.email-form input[type="email"] {
+    padding: clamp(10px, 2vw, 15px);
+    font-size: clamp(1rem, 2vw, 1.1rem); 
+    width: clamp(250px, 30vw, 400px); 
+    border: 2px solid #333;
+    border-radius: 3px; 
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: white;
+    transition: all 0.3s ease; 
+}
+
+.email-form input[type="email"]:focus {
+    outline: none;
+    border-color: #ffffff; 
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+.email-form button {
+    padding: clamp(10px, 2vw, 15px) clamp(20px, 4vw, 30px); 
+    background-color: #e50914;
+    border: none;
+    color: white;
+    font-size: clamp(1rem, 2vw, 1.1rem); 
+    cursor: pointer;
+    border-radius: 3px; 
+    transition: background-color 0.3s ease; 
+}
+
+.email-form button:hover {
+    background-color: #c8141c; 
+    transform: none; 
+}
+
+.email-form button:focus {
+    outline: none;
+}
+
+/* Carousel section to display trending movies */
+
+.carousel-section {
+    width: 90%;
+    padding: 20px;
+    margin: auto;
+}
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    max-width: calc(220px * 5.2);
+}
+
+.carousel-section-title {
+    margin-left: 7%;
+    font-size: 1.7rem;
+    margin-bottom: 17px;
+    color: white;
+    font-weight: bold;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: calc(220px * 10);
+}
+
+.carousel-card {
+    min-width: 15%;
+    margin: 0 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.carousel-card:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.carousel-card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+}
+
+.card-number {
+    position: absolute;
+    top: 60%;
+    left: 8px;
+    font-size: 5vw;
+    font-weight: bold;
+    color: #000000;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+}
+
+.card-info span {
+    color: rgb(255, 255, 255);
+    background: #e50914;
+    padding: 4px 10px;
+    font-size: 1.3vw;
+}
+
+.arrow {
+    font-size: 35px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 12px;
+    border-radius: 50%;
+    z-index: 100;
+    color: white;
+}
+
+.arrow-left {
+    left: 10px;
+    display: block;
+}
+
+.arrow-right {
+    right: 10px;
+    display: block;
+}
+
+@media (max-width: 1224px) {
+    .carousel-card {
+        min-width: 17%;
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 624px) {
+    .carousel-card {
+        min-width: 25%;
+        margin: 0 15px;
+    }
+}
+
+/* Features section styles for showcasing key features  */
+
+.section-features {
+    width: 80%;
+    padding: 20px;
+    margin: auto;
+    border-radius: 20px;
+}
+
+/* Heading styles for features section */
+.section-heading {
+    text-align: left; 
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 30px;
+    margin-left: 7%; 
+}
+
+/* Grid layout for features cards */
+
+.features-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Individual feature card styling */
+
+.feature-card {
+    width: 265px;
+    height: 300px;
+    background-color: #1D1932;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    margin-bottom: 20px; 
+    position: relative; 
+}
+
+/* Title styling for features cards */
+
+.feature-title {
+    font-size: 20px;
+    font-weight: 650;
+    margin: 10px 0;
+    text-align: left;
+}
+
+/* Description styling for features cards */
+
+.feature-description {
+    color: #babac2;
+    font-size: 14px;
+    margin-top: 10px; 
+    margin-bottom: 150px; 
+    text-align: left;
+}
+
+/* Icon styling for features cards */
+
+.feature-icon {
+    position: absolute; 
+    bottom: 10px;  
+    right: 10px;  
+}
+
+.feature-icon img {
+    width: 65px; 
+    height: 60px; 
+}
+
+/* Title alignment for the section */
+
+.feature-section-title {
+    margin-left: 2%;
+    font-size: 1.7rem;
+    margin-bottom: 17px;
+    color: white;
+    font-weight: bold; 
+}
+
+@media (max-width: 1024px) {
+    .feature-card {
+        width: calc(50% - 10px); 
+    }
+}
+
+@media (max-width: 768px) {
+    .feature-card {
+        width: 100%; 
+    }
+}
+
+/* List container for Frequently Asked Questions entries */
+
+.faq-list {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 76%;
+    margin: auto;
+}
+
+/* Individual Frequently Asked Questions entry styling */
+
+.faq-entry {
+    background-color: #333;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.faq-section-title {
+    margin-left: 13%;
+    font-size: 1.6rem;
+    margin-bottom: 17px;
+    color: white;
+    font-weight: bold;
+}
+
+.faq-entry.active {
+    background-color: #555;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.faq-entry:hover {
+    background-color: #484444; 
+    color: black; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.faq-answer {
+    display: none;
+    padding-top: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+.faq-entry.active .faq-answer {
+    display: block;
+}
+
+.toggle-icon {
+    font-size: 1.2rem;
+}
+
+/* Text styling for questions in Frequently Asked Questions */
+
+/* Responsive Code for Tablets */
+@media (max-width: 768px) {
+        .faq-section-title {
+            margin-left: 2%;
+            font-size: 1.7rem;
+            margin-bottom: 17px;
+            color: white;
+            font-weight: bold; 
+        }
+
+        .section-heading {
+            font-size: 1.8rem;
+        }
+
+        .faq-entry {
+            padding: 10px;
+        }
+
+        .faq-question {
+            font-size: 1rem;
+        }
+
+        .faq-answer {
+            font-size: 0.9rem;
+        }
+
+        .toggle-icon {
+            font-size: 1rem;
+        }
+    }
+
+    /* Responsive Code for Mobile */
+    @media (max-width: 480px) {
+        .section-faq {
+            width: 95%;
+            padding: 10px;
+        }
+
+        .section-heading {
+            font-size: 1.5rem;
+        }
+
+        .faq-entry {
+            margin: 5px 0;
+        }
+
+        .faq-question {
+            font-size: 0.9rem;
+        }
+
+        .faq-answer {
+            font-size: 0.8rem;
+        }
+
+        .toggle-icon {
+            font-size: 0.9rem;
+        }
+    }
+
+/* Subscription section styles */
+
+.subscription-section {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    flex-direction: column;  
+    padding: 20px 0;
+    background-color: #000;
+    width: 80%;
+    margin: auto;
+}
+
+.subscription-content{
+    max-width: 750px;
+    padding: 20px;
+}
+
+.subscription-section p {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+    .subscription-section p {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+
+/* Footer styles */
+.site-footer {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    background-color: #000;
+}
+
+.footer-title {
+    font-size: 0.9rem;
+    margin-left: 12%;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    color: rgba(136, 136, 136, 255);
+}
+
+.footer-links {
+    justify-content: center;
+    align-items: center;
+    width: 76%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-link-group {
+    width: 25%;
+    margin-bottom: 20px;
+}
+
+.footer-link-group a {
+    display: block;
+    color: #888;
+    text-decoration: underline; 
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+/* Language selector */
+.language-dropdown {
+    font-size: 1.4rem;
+    margin: 10px 0 20px 12%;
+    color: white;
+    font-weight: bold;
+}
+
+.language-select {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+/* Footer bottom text */
+.footer-copyright {
+    margin-top: 30px;
+    font-size: 0.4rem;
+    margin: 10px 0 20px 12%;
+    color: #888;
+}
+
+/* Responsive Code */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .footer-link-group {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .footer-title,
+    .language-dropdown {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .language-dropdown {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .language-select {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+        width: 200px;
+    }
+
+    .footer-copyright {
+        font-size: 0.8rem;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-link-group {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-title {
+        font-size: 1.2rem;
+    }
+
+    .footer-link-group a {
+        font-size: 0.9rem;
+    }
+
+    .language-select {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.8rem;
+        margin: 0 auto;
+    }
+
+    .footer-copyright {
+        font-size: 0.7rem;
+        text-align: left;
+        margin-top: 20px;
+    }
+}
+
+
+
+

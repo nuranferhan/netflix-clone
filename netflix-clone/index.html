@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png" sizes="32x32" type="image/png">
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <select name="language" id="language">
+            <option value="en">English</option>
+            <option value="tr">Türkçe</option>
+        </select>
+        <button>Sign In</button>
+    </div>
+
+    <div class="background">
+        <div class="overlay">
+            <div class="content">
+                <img src="images/netflix.png" alt="Netflix Logo" class="logo">
+                <h1>Unlimited movies, TV shows and more</h1>
+                <p>Starts at 149.99 TL. Cancel anytime.</p>
+                <div>Ready to watch? Enter your email to create or restart your membership.</div>
+                <form class="email-form">
+                    <input type="email" placeholder="Email address" required>
+                    <button type="submit">Get Started  > </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Image Carousel Section -->
+    <div class="carousel-section">
+        <h2 class="carousel-section-title">Trending Now</h2>
+        <div class="carousel-wrapper">
+            <div class="arrow arrow-left" onclick="moveLeft()">&#8249;</div> <!-- Left arrow -->
+            <div class="carousel-track" id="carousel-track">
+                <div class="carousel-card">
+                    <img src="images/poster1.jpg" alt="Movie 1">
+                    <div class="card-number">1</div>
+                    <div class="card-info">
+                    </div>
+                </div>
+                <div class="carousel-card">
+                    <img src="images/poster2.jpg" alt="Movie 2">
+                    <div class="card-number">2</div>
+                    <div class="card-info">
+                    </div>
+                </div>
+                <div class="carousel-card">
+                    <img src="images/poster3.jpg" alt="Movie 3">
+                    <div class="card-number">3</div>
+                    <div class="card-info">
+                    </div>
+                </div>
+                <div class="carousel-card">
+                    <img src="images/poster4.png" alt="Movie 4">
+                    <div class="card-number">4</div>
+                    <div class="card-info">
+                    </div>
+                </div>
+                <div class="carousel-card">
+                    <img src="images/poster5.jpg" alt="Movie 5">
+                    <div class="card-number">5</div>
+                    <div class="card-info">
+                    </div>
+                </div>
+                <div class="carousel-card">
+                    <img src="images/poster6.jpg" alt="Movie 6">
+                    <div class="card-number">6</div>
+                    <div class="card-info">
+                    </div>
+                </div>
+                <div class="carousel-card">
+                    <img src="images/poster7.jpg" alt="Movie 7">
+                    <div class="card-number">7</div>
+                    <div class="card-info">
+                    </div>
+                </div>
+                <div class="carousel-card">
+                    <img src="images/poster8.jpg" alt="Movie 8">
+                    <div class="card-number">8</div>
+                    <div class="card-info">
+                    </div>
+                </div>
+                <div class="carousel-card">
+                    <img src="images/poster9.jpg" alt="Movie 9">
+                    <div class="card-number">9</div>
+                    <div class="card-info">
+                    </div>
+                </div>
+                <div class="carousel-card">
+                    <img src="images/poster10.jpg" alt="Movie 10">
+                    <div class="card-number">10</div>
+                    <div class="card-info">
+                    </div>
+                </div>
+            </div>
+            <div class="arrow arrow-right" onclick="moveRight()">&#8250;</div> 
+        </div>
+    </div>
+
+
+<!-- Features Section -->
+<div class="section-features">
+    <h2 class="feature-section-title">More reasons to join</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <span class="feature-title">Enjoy on your TV</span>
+            <p class="feature-description">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+            <div class="feature-icon">
+                <img src="images/tv.png" alt="">
+            </div>
+        </div>
+        <div class="feature-card">
+            <span class="feature-title">Download your shows to watch offline</span>
+            <p class="feature-description">Save your favourites easily and always have something to watch.</p>
+            <div class="feature-icon">
+                <img src="images/download.png" alt="">
+            </div>
+        </div>
+        <div class="feature-card">
+            <span class="feature-title">Watch everywhere</span>
+            <p class="feature-description">Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
+            <div class="feature-icon">
+                <img src="images/celebration.png" alt="">
+            </div>
+        </div>
+        <div class="feature-card">
+            <span class="feature-title">Create profiles for kids</span>
+            <p class="feature-description">Send kids on adventures with their favorite characters in a space made just for them — free with your membership.</p>
+            <div class="feature-icon">
+                <img src="images/profile.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Frequently Asked Questions Section -->
+<div class="section-faq">
+        <h2 class="faq-section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+            <div class="faq-entry">
+                <div class="faq-question">
+                    <span class="question-text">What is Netflix?</span>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime,
+                    documentaries, and more – on thousands of internet-connected devices.</p>
+                    <p>You can watch as much as you want, whenever you want, without a single ad – all for one low monthly
+                    price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+                </div>
+            </div>
+
+            <div class="faq-entry">
+                <div class="faq-question">
+                    <span class="question-text">How much does Netflix cost?</span>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly 
+                    fee. Plans range from 149.99 TL to 299.99 TL a month. No extra costs, no contracts.</p>
+                </div>
+            </div>
+
+            <div class="faq-entry">
+                <div class="faq-question">
+                    <span class="question-text">Where can I watch?</span>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from 
+                    your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs,
+                    smartphones, tablets, streaming media players and game consoles. </p>
+                    <p>You can also download your favorite shows with the iOS or Android app. Use downloads to watch while you're on
+                    the go and without an internet connection. Take Netflix with you anywhere.</p>
+                </div>
+            </div>
+
+            <div class="faq-entry">
+                <div class="faq-question">
+                    <span class="question-text">How do I cancel?</span>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your
+                    account online in two clicks. There are no cancellation fees – start or stop your account anytime. </p>
+                </div>
+            </div>
+
+
+            <div class="faq-entry">
+                <div class="faq-question">
+                    <span class="question-text">What can I watch on Netflix?</span>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning
+                    Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+                </div>
+            </div>
+
+            <div class="faq-entry">
+                <div class="faq-question">
+                    <span class="question-text">Is Netflix good for kids?</span>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>The Netflix Kids experience is included in your membership to give parents control while kids enjoy
+                    family-friendly TV shows and movies in their own space. </p>
+                    <p>Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of
+                    content kids can watch and block specific titles you don’t want kids to see.</p>
+                </div>
+            </div>
+        </div>
+    </div>        
+
+<!-- Subscription Section -->
+<div class="subscription-section">   
+        <div class="subscription-content">Ready to watch? Enter your email to create or restart your membership.</div>
+        <form class="email-form">
+            <input type="email" placeholder="Email address" required>
+            <button type="submit">Get Started  > </button>
+        </form>
+</div>    
+
+<!-- Footer Section -->
+    <div class="site-footer">
+        <div class="footer-title">Questions? Contact us.</div>
+        <!-- Footer Links -->
+        <div class="footer-links">
+            <div class="footer-link-group">
+                <a href="#">FAQ</a>
+                <a href="#">Investor Relations</a>
+                <a href="#">Privacy</a>
+                <a href="#">Speed Test</a>
+            </div>
+            <div class="footer-link-group">
+                <a href="#">Help Centre</a>
+                <a href="#">Jobs</a>
+                <a href="#">Cookie Preferences</a>
+                <a href="#">Legal Notices</a>
+            </div>
+            <div class="footer-link-group">
+                <a href="#">Account</a>
+                <a href="#">Ways to Watch</a>
+                <a href="#">Corporate Information</a>
+                <a href="#">Only on Netflix</a>
+            </div>
+            <div class="footer-link-group">
+                <a href="#">Media Centre</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>    
+
+  <!-- Language Selector -->
+        <div class="language-dropdown">
+            <select class="language-select">
+                <option value="">English</option>
+                <option value="">Türkçe</option>
+                 <!-- Additional languages can be added -->
+            </select>
+        </div>
+      
+        <!-- Footer Bottom Text -->
+        <div class="footer-copyright">
+            <p>Netflix Türkiye</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
